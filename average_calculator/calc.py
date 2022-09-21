@@ -28,8 +28,18 @@ def calculator():
 def print_average(numbers):
     average_value = rounded_average(numbers)
     print(f"The rounded-down average of the numbers you entered is {average_value}")
+   
 
 
 def rounded_average(numbers):
-    avg = sum(numbers) / len(numbers)
+    if numbers == []:
+        raise ValueError("Cannot compute average of an empty collection.")
+    else:
+        avg = sum(numbers) / len(numbers)
     return floor(avg)
+    
+
+
+    
+# num_list = []
+# rounded_average(num_list)
